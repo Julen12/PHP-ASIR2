@@ -18,7 +18,8 @@ for ($i=0; $i < count($v); $i++) {
     
 
 
- echo "resultado: " . $suma;
+ echo "batura: " . $suma;
+    
 
 // while
 
