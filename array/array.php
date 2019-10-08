@@ -18,7 +18,7 @@ for ($i=0; $i < count($v); $i++) {
     
 
 
- echo "baturax2: " . $suma;
+ echo "batura: " . $suma;
     
 
 // while
