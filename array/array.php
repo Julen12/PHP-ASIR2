@@ -23,4 +23,17 @@ for ($i=0; $i < count($v); $i++) {
 
 // while
 
-// for each
+
+$suma = 0;
+$i = 0;
+while ($i < count($v)) {
+    $suma = $suma + $v[$i];
+    $i++;
+}
+echo "batura while: " . $suma . "<br>";
+// foreach
+foreach ($v as $x) {
+    //echo $x . "<br>";
+    $suma = $suma + $x;
+}
+echo "batura foreach: " . $suma;
