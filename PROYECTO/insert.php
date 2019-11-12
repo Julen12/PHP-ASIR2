@@ -9,8 +9,9 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-//
-$id = $_POST["id"];
-$sql = "DELETE FROM blog WHERE id=$id";
+$title =  $_POST['title'];
+$info  = $_POST['info'];
+$img = $_POST['img'];
+$sql = "insert into blog (title,info,img) VALUES ('$title','$info','$img')";
 $result = $conn->query($sql);
 header("Location: delete_boton.php");

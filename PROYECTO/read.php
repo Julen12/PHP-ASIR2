@@ -1,7 +1,14 @@
-<?php
+
+        <form action="login.html" method="POST">
+            <input type="hidden" name="id" value="<?php echo $row["id"]?>">
+            <input type="submit" value="Editar pagina">
+        </form>
+        <hr/> 
+        <?php
+
 $servername = "localhost";
-$username = "koxme";
-$password = "pasahitza";
+$username = "root";
+$password = "Admin108";
 $dbname = "asir2_crud";
 // Create connection
 $conn = new mysqli($servername, $username, $password,$dbname);
@@ -21,3 +28,4 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 $conn->close();
+
