@@ -16,22 +16,38 @@ $sql = "SELECT * FROM blog";
     <input type="hidden" name="id" value="<?php echo $row["id"]?>">
     <input type="submit" value="Insert">
 </form>
-<hr/> 
+<form action="read.php" method="POST">
+<input type="hidden" name="id" value="<?php echo $row["id"]?>">
+ <input type="submit" value="Cerrar sesion">
+</form>
+<hr/>
 <?php
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. "<br> title: " . $row["title"]. "<br> info:" . $row["info"]. "<br> <img width='20%' src=img/" . $row["img"] . "> <br><hr/>";
+        echo "title: " . $row["title"]. "<br> info:" . $row["info"]. "<br> <img width='20%' src=img/" . $row["img"] . "> <br>";
     
         ?>
         <form action="delete.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $row["id"]?>">
             <input type="submit" value="Delete">
+        </form> 
+        <?php
+
+        
+        ?>
+        <form action="update.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $row["id"]?>">
+            titulo:<input type="input" name="title" value="<?php echo $row["title"]?>"> <br>
+            info:<input type="input" name="info" value="<?php echo $row["info"]?>"> <br>
+            img:<input type="file" name="img" value="<?php echo $row["img"]?>"> <br>
+            <input type="submit" value="Actualizar">
         </form>
         <hr/> 
         <?php
-    }
+
+                        }
 } else {
     echo "0 results";
 }
