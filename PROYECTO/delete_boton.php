@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 //
 $sql = "SELECT * FROM blog";
 ?>
-<form action="insert.html" method="POST">
+<form action="insert2.html" method="POST">
     <input type="hidden" name="id" value="<?php echo $row["id"]?>">
     <input type="submit" value="Insert">
 </form>
