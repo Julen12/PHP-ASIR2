@@ -12,9 +12,9 @@ if ($conn->connect_error) {
 //
 $sql = "SELECT * FROM blog";
 ?>
-<form action="insert2.html" method="POST">
+<form action="insert.html" method="POST">
     <input type="hidden" name="id" value="<?php echo $row["id"]?>">
-    <input type="submit" value="Insert">
+    <input type="submit" value="Añadir noticia">
 </form>
 <form action="read.php" method="POST">
 <input type="hidden" name="id" value="<?php echo $row["id"]?>">
