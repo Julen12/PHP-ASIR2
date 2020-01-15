@@ -17,7 +17,12 @@ class ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
+            'Psr\\SimpleCache\\' => 16,
             'Psr\\Http\\Message\\' => 17,
+        ),
+        'I' => 
+        array (
+            'InstagramScraper\\' => 17,
         ),
         'G' => 
         array (
@@ -32,9 +37,17 @@ class ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3
     );
 
     public static $prefixDirsPsr4 = array (
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'InstagramScraper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/raiym/instagram-php-scraper/src/InstagramScraper',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -54,11 +67,22 @@ class ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'U' => 
+        array (
+            'Unirest\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/mashape/unirest-php/src',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
