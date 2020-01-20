@@ -1,5 +1,48 @@
 [
     {
+        "name": "chatapi/whatsapp",
+        "version": "v1.1",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/chatapi/whatsApp-php.git",
+            "reference": "e1a7d0401f0730b737595bfd943cc1f47c84b43e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/chatapi/whatsApp-php/zipball/e1a7d0401f0730b737595bfd943cc1f47c84b43e",
+            "reference": "e1a7d0401f0730b737595bfd943cc1f47c84b43e",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "^6.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^5.7"
+        },
+        "time": "2018-07-13T08:56:33+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Tamidin",
+                "email": "taubm@yandex.ru"
+            }
+        ],
+        "description": "Library for WhatsApp api",
+        "keywords": [
+            "api",
+            "library",
+            "whatsapp"
+        ]
+    },
+    {
         "name": "cosenary/instagram",
         "version": "v2.3",
         "version_normalized": "2.3.0.0",

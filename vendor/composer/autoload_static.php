@@ -85,12 +85,17 @@ class ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3
         ),
     );
 
+    public static $classMap = array (
+        'chatapi\\WhatsApp\\Client' => __DIR__ . '/..' . '/chatapi/whatsapp/src/Client.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3::$classMap;
 
         }, null, ClassLoader::class);
     }

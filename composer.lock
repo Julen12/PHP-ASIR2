@@ -4,8 +4,49 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "81a6b49fb8c25b64b24d5de82904adb6",
+    "content-hash": "c7a3226010c4b00b87ef2640f4a6fce8",
     "packages": [
+        {
+            "name": "chatapi/whatsapp",
+            "version": "v1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chatapi/whatsApp-php.git",
+                "reference": "e1a7d0401f0730b737595bfd943cc1f47c84b43e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chatapi/whatsApp-php/zipball/e1a7d0401f0730b737595bfd943cc1f47c84b43e",
+                "reference": "e1a7d0401f0730b737595bfd943cc1f47c84b43e",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Tamidin",
+                    "email": "taubm@yandex.ru"
+                }
+            ],
+            "description": "Library for WhatsApp api",
+            "keywords": [
+                "api",
+                "library",
+                "whatsapp"
+            ],
+            "time": "2018-07-13T08:56:33+00:00"
+        },
         {
             "name": "cosenary/instagram",
             "version": "v2.3",
