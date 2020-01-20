@@ -20,6 +20,10 @@ class ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Http\\Message\\' => 17,
         ),
+        'M' => 
+        array (
+            'MetzWeb\\Instagram\\' => 18,
+        ),
         'I' => 
         array (
             'InstagramScraper\\' => 17,
@@ -44,6 +48,10 @@ class ComposerStaticInitb86cfc3e5d33f49e6d7172eb276439e3
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'MetzWeb\\Instagram\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cosenary/instagram/src',
         ),
         'InstagramScraper\\' => 
         array (

@@ -1,6 +1,7 @@
 {
     "require": {
         "dmitry-ivanov/dark-sky-api": "^1.1",
-        "raiym/instagram-php-scraper": "^0.9.1"
+        "raiym/instagram-php-scraper": "^0.9.1",
+        "cosenary/instagram": "^2.3"
     }
 }
