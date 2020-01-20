@@ -1,6 +1,6 @@
 <?php
 $data = [
-    'phone' => '34688866966', // Receivers phone
+    'phone' => '5656565656', // Receivers phone
     'body' => 'HEEEEYYYYYYYYY', // Message
 ];
 $json = json_encode($data); // Encode data to JSON
