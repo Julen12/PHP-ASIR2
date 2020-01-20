@@ -5,7 +5,6 @@ $data = [
 ];
 $json = json_encode($data); // Encode data to JSON
 // URL for request POST /message
-var = $token
 $url = 'https://app.chat-api.com/instance/93398';
 // Make a POST request
 $options = stream_context_create(['http' => [
