@@ -1,6 +1,14 @@
 
 <?php
 require 'vendor/autoload.php';
-$instagram = new InstagramScraper\Instagram();
-$nonPrivateAccountMedias = $instagram->getMedias('kevin');
-echo $nonPrivateAccountMedias[0]->getLink();
+
+
+$accounts = $instagram->searchAccountsByUsername('raiym');
+
+$account = $accounts[0];
+// Following fields are available in this request
+echo "Account info:\n";
+echo "Username: {$account->getUsername()}";
+echo "Full name: {$account->getFullName()}";
+echo "Profile pic url: {$account->getProfilePicUrl()}";
+
