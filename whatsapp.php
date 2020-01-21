@@ -1,14 +1,13 @@
 <?php
-$_POST['phone'];
- $_POST['body'];
+ $_POST['phone'];
+$_POST['body'];
 $data = [
-    'phone' =>  $_POST['phone'],
-    'body' =>  $_POST['body'],
+    'phone' => $_POST['phone'], // Receivers phone
+    'body' => $_POST['body'], // Message
 ];
-
 $json = json_encode($data); // Encode data to JSON
 // URL for request POST /message
-$url = 'https://eu92.chat-api.com/instance93398/sendMessage?token=dp6kk14irlsk4b4i';
+$url = 'https://eu93.chat-api.com/instance93596/sendMessage?token=j78a2x7eauihs4h3';
 // Make a POST request
 $options = stream_context_create(['http' => [
         'method'  => 'POST',
@@ -16,4 +15,6 @@ $options = stream_context_create(['http' => [
         'content' => $json
     ]
 ]);
+// Send a request
+$result = file_get_contents($url, false, $options);
 
