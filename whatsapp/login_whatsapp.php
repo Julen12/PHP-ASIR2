@@ -25,6 +25,6 @@ if ($conexion == true) {
  //redirijo a otro archivo php
  echo "OK";
 } else {
- echo "Algo ha fallado bro";
+ echo "Algo ha fallado";
 }
 ?>
