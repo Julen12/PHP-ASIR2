@@ -1,9 +1,9 @@
 <?php
-$_POST['phone'];
- $_POST['body'];
 $data = [
-    'phone' =>  $_POST['phone'],
-    'body' =>  $_POST['body'],
+    'chatid' => '34688813345@c.es',
+    'phone' => '34688813345', // Receivers phone
+    "body"=> "https://upload.wikimedia.org/wikipedia/ru/3/33/NatureCover2001.jpg",
+    'filename' => 'cover.jpg', // Message
 ];
 
 $json = json_encode($data); // Encode data to JSON
@@ -16,4 +16,3 @@ $options = stream_context_create(['http' => [
         'content' => $json
     ]
 ]);
-
