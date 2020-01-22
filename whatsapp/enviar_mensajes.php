@@ -17,7 +17,7 @@ if(!isset($_SESSION["username"]))
 <body>
     <div class="container" style="margin-top:50px";>
         <img src="whatsapp_logo.png">
-<form action="whatsapp.php" method="POST">
+<form action="enviar_mensajes.php" method="POST">
     <input type="text"  name="phone" placeholder="Telefono">
     <br>
     <br>
@@ -38,7 +38,7 @@ if(!isset($_SESSION["username"]))
     ];
     $json = json_encode($data); // Encode data to JSON
     // URL for request POST /message
-    $url = 'https://eu92.chat-api.com/instance93398/sendMessage?token=dp6kk14irlsk4b4i';
+    $url = 'https://api.chat-api.com/instance93596/sendMessage?token=j78a2x7eauihs4h3';
     // Make a POST request
     $options = stream_context_create(['http' => [
             'method'  => 'POST',
