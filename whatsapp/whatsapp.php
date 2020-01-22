@@ -1,13 +1,44 @@
 <?php
- $_POST['phone'];
-$_POST['body'];
+session_start();  
+if(!isset($_SESSION["username"]))  
+{  
+     header("location:index.php?action=login");  
+}  
+?>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" style="margin-top:50px";>
+        <img src="whatsapp_logo.png">
+<form action="whatsapp.php" method="POST">
+    <input type="text"  name="phone" placeholder="Telefono">
+    <br>
+    <br>
+
+    <input type="text" name="body" placeholder="Mensaje">
+    <br> <br>
+    <input type="submit" value="Enviar">
+    </form>
+
+    
+    </div>
+</body>
+</html>
+<?php
 $data = [
     'phone' => $_POST['phone'], // Receivers phone
     'body' => $_POST['body'], // Message
 ];
 $json = json_encode($data); // Encode data to JSON
 // URL for request POST /message
-$url = 'https://eu93.chat-api.com/instance93596/sendMessage?token=j78a2x7eauihs4h3';
+$url = 'https://eu92.chat-api.com/instance93398/sendMessage?token=dp6kk14irlsk4b4i';
 // Make a POST request
 $options = stream_context_create(['http' => [
         'method'  => 'POST',
@@ -17,4 +48,6 @@ $options = stream_context_create(['http' => [
 ]);
 // Send a request
 $result = file_get_contents($url, false, $options);
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+
 

@@ -1,6 +1,4 @@
-index.php
-
- <?php  
+<?php  
  $connect = mysqli_connect("localhost", "root", "Admin108", "login");  
  session_start();  
  if(isset($_SESSION["username"]))  
@@ -11,7 +9,7 @@ index.php
  {  
       if(empty($_POST["username"]) || empty($_POST["password"]))  
       {  
-           echo '<script>alert("Both Fields are required")</script>';  
+           echo '<script>alert("Ambos campos son obligatorios")</script>';  
       }  
       else  
       {  
@@ -21,7 +19,8 @@ index.php
            $query = "INSERT INTO users(user, pass) VALUES('$username', '$password')";  
            if(mysqli_query($connect, $query))  
            {  
-                echo '<script>alert("Registration Done")</script>';  
+                echo '<script>alert("Registro hecho")</script>';  
+                header("location:index.php?action=login");  
            }  
       }  
  }  
@@ -29,7 +28,7 @@ index.php
  {  
       if(empty($_POST["username"]) || empty($_POST["password"]))  
       {  
-           echo '<script>alert("Both Fields are required")</script>';  
+           echo '<script>alert("Ambos campos son obligatorios")</script>';  
       }  
       else  
       {  
@@ -41,22 +40,22 @@ index.php
            {  
                 while($row = mysqli_fetch_array($result))  
                 {  
-                     if(password_verify($password, $row["password"]))  
+                     if(password_verify($password, $row["pass"]))  
                      {  
                           //return true;  
-                          $_SESSION["usersanme"] = $username;  
-                          header("location:entry.php");  
+                          $_SESSION["username"] = $username;  
+                          header("location:whatsapp.php");  
                      }  
                      else  
                      {  
                           //return false;  
-                          echo '<script>alert("Wrong User Details")</script>';  
+                          echo '<script>alert("Detalles de usuario incorrectos")</script>';  
                      }  
                 }  
            }  
            else  
            {  
-                echo '<script>alert("Wrong User Details")</script>';  
+                echo '<script>alert("Detalles de usuario incorrectos")</script>';  
            }  
       }  
  }  
@@ -64,7 +63,7 @@ index.php
  <!DOCTYPE html>  
  <html>  
       <head>  
-           <title>Webslesson Tutorial | PHP Login Registration Script by using password_hash() method</title>  
+           <title>Bienvenido a Whatsapp </title>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
@@ -72,46 +71,46 @@ index.php
       <body>  
            <br /><br />  
            <div class="container" style="width:500px;">  
-                <h3 align="center">PHP Login Registration Script by using password_hash() method</h3>  
+                <h3 align="center">Bienvenido a Whatsapp</h3>  
                 <br />  
                 <?php  
                 if(isset($_GET["action"]) == "login")  
                 {  
                 ?>  
-                <h3 align="center">Login</h3>  
+                <h3 align="center">Iniciar Sesion</h3>  
                 <br />  
                 <form method="post">  
-                     <label>Enter Username</label>  
+                     <label>Usuario</label>  
                      <input type="text" name="username" class="form-control" />  
                      <br />  
-                     <label>Enter Password</label>  
-                     <input type="text" name="password" class="form-control" />  
+                     <label>Contraseña</label>  
+                     <input type="password" name="password" class="form-control" />  
                      <br />  
-                     <input type="submit" name="login" value="Login" class="btn btn-info" />  
+                     <input type="submit" name="login" value="Iniciar Sesion" class="btn btn-info" />  
                      <br />  
-                     <p align="center"><a href="index.php">Register</a></p>  
+                     <p align="center"><a href="index.php">Registrarse</a></p>  
                 </form>  
                 <?php       
                 }  
                 else  
                 {  
                 ?>  
-                <h3 align="center">Register</h3>  
+                <h3 align="center">Registrarse</h3>  
                 <br />  
                 <form method="post">  
-                     <label>Enter Username</label>  
+                     <label>Usuario</label>  
                      <input type="text" name="username" class="form-control" />  
                      <br />  
-                     <label>Enter Password</label>  
-                     <input type="text" name="password" class="form-control" />  
+                     <label>Contraseña</label>  
+                     <input type="password" name="password" class="form-control" />  
                      <br />  
-                     <input type="submit" name="register" value="Register" class="btn btn-info" />  
+                     <input type="submit" name="register" value="Registrarse" class="btn btn-info" />  
                      <br />  
-                     <p align="center"><a href="index.php?action=login">Login</a></p>  
+                     <p align="center"><a href="index.php?action=login">Iniciar Sesion</a></p>  
                 </form>  
                 <?php  
                 }  
                 ?>  
            </div>  
       </body>  
- </html> 
+ </html>  
