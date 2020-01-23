@@ -26,7 +26,7 @@ if(!isset($_SESSION["username"]))
     <br> <br>
     <input type="submit" value="Enviar">
     <a align="center" href="botones.php" class="btn btn-success">Regresar</a> 
-    <br>
+    <br> <br>
                                                 <h5> TELEFONOS</h5> 
                                              <?php
                                              $servername = "localhost";
