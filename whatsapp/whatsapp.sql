@@ -1,6 +1,7 @@
 create database login;
 CREATE TABLE IF NOT EXISTS users (
-    user VARCHAR(50) NOT NULL PRIMARY KEY,
+    id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user VARCHAR(50) ,
     pass VARCHAR(250)
 );
  CREATE TABLE telefono (numero VARCHAR(50));
