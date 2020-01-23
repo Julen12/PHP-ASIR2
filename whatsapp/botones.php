@@ -12,4 +12,5 @@
 <br>
 <a align="center" href="insertar.php" class="btn btn-success">Añadir nº telefono</a>
 <a align="center" href="eliminar.php" class="btn btn-success">Eliminar nº telefono</a>
+<a align="center" href="actualizar.php" class="btn btn-success">Actualizar nº telefono</a>
 

@@ -25,6 +25,28 @@ if(!isset($_SESSION["username"]))
     <input type="text" name="body" placeholder="Mensaje">
     <br> <br>
     <input type="submit" value="Enviar">
+    <a align="center" href="botones.php" class="btn btn-success">Regresar</a> 
+    <br>
+                                                <h5> TELEFONOS</h5> 
+                                             <?php
+                                             $servername = "localhost";
+                                             $username = "root";
+                                             $password = "Admin108";
+                                             $dbname = "login";
+                                             // Create connection
+                                             $conn = new mysqli($servername, $username, $password,$dbname);
+                                             // Check connection
+                                             if ($conn->connect_error) {
+                                             die("Connection failed: " . $conn->connect_error);
+                                             }
+                                             $sql = "SELECT * FROM telefono";
+                                             $result = $conn->query($sql);
+                                             $row = mysqli_fetch_array($result);
+                                             while ($row = $result->fetch_assoc()) {
+                                             echo $row['numero']."<br>";
+                                             }
+                                             ?>
+    
     </form>
 
     
@@ -48,6 +70,8 @@ if(!isset($_SESSION["username"]))
     ]);
     // Send a request
     $result = file_get_contents($url, false, $options);
+    ?>
+                            
     
 
     

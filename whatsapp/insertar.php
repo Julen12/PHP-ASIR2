@@ -13,7 +13,7 @@
                 <br />    
                 <form  action ="insertar.php" method="post">  
                      <label>Telefono</label>  
-                     <input type="text" name="telefono" class="form-control" />  
+                     <input type="text" name="telefono" class="form-control"/>  
                      <br />  
                      <input type="submit" name="enviar" value="Añadir" class="btn btn-info" />
                      <a align="center" href="botones.php" class="btn btn-success">Regresar</a>  
