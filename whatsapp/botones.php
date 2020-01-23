@@ -1,4 +1,10 @@
-
+<?php
+session_start();  
+if(!isset($_SESSION["username"]))  
+{  
+     header("location:index.php?action=login");  
+}  
+?>
 
 <html lang="en">
 <head>
