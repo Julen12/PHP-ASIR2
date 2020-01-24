@@ -3,7 +3,7 @@
  session_start();  
  if(isset($_SESSION["username"]))  
  {  
-      header("location:entry.php");  
+     session_destroy(); 
  }  
  if(isset($_POST["register"]))  
  {  

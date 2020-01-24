@@ -52,9 +52,9 @@ if(!isset($_SESSION["username"]))
     </form>
     <style>
     .telefonos{
-        position:absolute;
-        left:650px;
-        bottom:250px;
+        position:relative;
+        left:660px;
+        bottom:550px;
     }
 </body>
 </html>
