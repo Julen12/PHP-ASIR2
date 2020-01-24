@@ -27,6 +27,7 @@ if(!isset($_SESSION["username"]))
     <input type="submit" value="Enviar">
     <a align="center" href="botones.php" class="btn btn-success">Regresar</a> 
     <br> <br>
+                                               <div class="telefonos">
                                                 <h5> TELEFONOS</h5> 
                                              <?php
                                              $servername = "localhost";
@@ -46,11 +47,15 @@ if(!isset($_SESSION["username"]))
                                              echo $row['numero']."<br>";
                                              }
                                              ?>
+                                             </div>
     
     </form>
-
-    
-    </div>
+    <style>
+    .telefonos{
+        position:absolute;
+        left:650px;
+        bottom:250px;
+    }
 </body>
 </html>
 <?php

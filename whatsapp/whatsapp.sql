@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS users (
     pass VARCHAR(250)
 );
  CREATE TABLE telefono (
+     id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
      numero VARCHAR(50)
      );
  
