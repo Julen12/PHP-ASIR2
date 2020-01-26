@@ -17,14 +17,14 @@ if(!isset($_SESSION["username"]))
 <body>
     <div class="container" style="margin-top:50px";>
         <img src="whatsapp_logo.png"> 
-<form action="enviar_mensajes.php" method="POST"> <br>
-    <input type="text"  name="phone" placeholder="Telefono">
+<form action="crear_grupo.php" method="POST"> <br>
+    <input type="text"  name="phones" placeholder="telefonos"><br>
     <br>
+    <input type="text" name="mensaje" placeholder="mensaje"><br>
     <br>
-
-    <input type="text" name="body" placeholder="Mensaje">
-    <br> <br>
-    <input type="submit" value="Enviar">
+    <input type="text" name="nombre_grupo" placeholder="nombre del grupo"><br>
+    <br>
+    <input type="submit" value="Crear Grupo">
     <a align="center" href="botones.php" class="btn btn-success">Regresar</a> 
     <br> <br>
                                                <div class="telefonos">
@@ -56,15 +56,15 @@ if(!isset($_SESSION["username"]))
         left:660px;
         bottom:550px;
     }
+    </style>
 </body>
 </html>
-<?php
+ <?php
     $data = [
         
-            "phones" => ["17472822486","79680565372"],
-            "messageText" => "Safari is the new IE",
-            "groupName" => "Browsers",
-         
+            "phones" => $_POST['phones'],
+            "messageText" => $_POST['mensaje'],
+            "groupName" => $_POST['nombre_grupo'],
     ];
     $json = json_encode($data); // Encode data to JSON
     // URL for request POST /message
@@ -79,3 +79,4 @@ if(!isset($_SESSION["username"]))
     // Send a request
     $result = file_get_contents($url, false, $options);
     ?>
+    

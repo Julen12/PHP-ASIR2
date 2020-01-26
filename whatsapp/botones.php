@@ -16,7 +16,8 @@ if(!isset($_SESSION["username"]))
 </head>
 <body>
 <br>
-<a align="center" href="enviar_mensajes.php" class="btn btn-success">Enviar Mensaje</a><br>
+<a align="center" href="enviar_mensajes.php" class="btn btn-success">Enviar Mensaje</a> 
+<a align="center" href="crear_grupo.php" class="btn btn-success">Crear Grupo</a><br>
 <br>
 <a align="center" href="insertar.php" class="btn btn-success">Añadir nº telefono</a>
 <a align="center" href="eliminar.php" class="btn btn-success">Eliminar nº telefono</a>
