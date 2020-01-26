@@ -16,8 +16,8 @@ if(!isset($_SESSION["username"]))
 </head>
 <body>
     <div class="container" style="margin-top:50px";>
-        <img src="whatsapp_logo.png">
-<form action="enviar_mensajes.php" method="POST">
+        <img src="whatsapp_logo.png"> 
+<form action="enviar_mensajes.php" method="POST"> <br>
     <input type="text"  name="phone" placeholder="Telefono">
     <br>
     <br>
@@ -28,7 +28,7 @@ if(!isset($_SESSION["username"]))
     <a align="center" href="botones.php" class="btn btn-success">Regresar</a> 
     <br> <br>
                                                <div class="telefonos">
-                                                <h5> TELEFONOS</h5> 
+                                                <h5>  NOMBRE  TELEFONOS</h5> 
                                              <?php
                                              $servername = "localhost";
                                              $username = "root";
@@ -44,7 +44,7 @@ if(!isset($_SESSION["username"]))
                                              $result = $conn->query($sql);
                                              $row = mysqli_fetch_array($result);
                                              while ($row = $result->fetch_assoc()) {
-                                             echo $row['numero']."<br>";
+                                                echo  "" . $row['nombre'] . "\n" . $row['numero']. "<br>";
                                              }
                                              ?>
                                              </div>

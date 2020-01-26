@@ -12,15 +12,14 @@
                 <h3 align="center">Eliminar nº telefono</h3>  
                 <br />    
                 <form  action ="eliminar.php" method="post" value="<?php echo $row["id"]?>">  
-                     <label>Telefono</label>  
-                     <input type="text" name="telefono" class="form-control" />
+                     <input type="text" name="telefono"  placeholder="telefono" class="form-control" />
                      <br/>   
                      <input type="submit" name="eliminar" value="Eliminar" class="btn btn-info" />
                      <a align="center" href="botones.php" class="btn btn-success">Regresar</a>   
                      <br/>  
                                    </form> 
                                    <br>
-                                   <h5> TELEFONOS</h5> 
+                                   <h5>  NOMBRE  TELEFONOS</h5> 
                                              <?php
                                              $servername = "localhost";
                                              $username = "root";
@@ -36,7 +35,7 @@
                                              $result = $conn->query($sql);
                                              $row = mysqli_fetch_array($result);
                                              while ($row = $result->fetch_assoc()) {
-                                             echo $row['numero']."<br>";
+                                              echo  "" . $row['nombre'] . "\n" . $row['numero']. "<br>";
                                              }
                                              ?>
                               </html>

@@ -13,7 +13,7 @@
                 <br />    
                 <form  action ="actualizar.php" method="post">  
                      <label>Telefono</label>  
-                     <input type="text" name="id"   placeholder="id" class="form-control"/><br>
+                     <input type="text" name="nombre"   placeholder="nombre" class="form-control"/><br>
                      <input type="text" name="telefono"   placeholder="telefono" class="form-control"/>
                      <br/>   
                      <a align="center" href="botones.php" class="btn btn-success">Regresar</a>
@@ -21,7 +21,7 @@
                      <br/>  
                                    </form> 
                                    <br>
-                                   <h5> TELEFONOS</h5> 
+                                   <h5> NOMBRE     TELEFONO</h5> 
                                              <?php
                                              $servername = "localhost";
                                              $username = "root";
@@ -37,7 +37,7 @@
                                              $result = $conn->query($sql);
                                              $row = mysqli_fetch_array($result);
                                              while ($row = $result->fetch_assoc()) {
-                                             echo  "id ". $row['id'] . "numero ". $row['numero']."<br>";
+                                             echo  "" . $row['nombre'] . "\n" . $row['numero']. "<br>";
                                              }
                                              ?>
                               </html>
@@ -54,7 +54,7 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$id = $_POST['id'];
+$nombre = $_POST['nombre'];
 $telefono = $_POST['telefono'];
-$sql = "UPDATE telefono SET numero='$telefono' WHERE id = '$id'";
+$sql = "UPDATE telefono SET numero='$telefono' WHERE nombre = '$nombre'";
 $result = $conn->query($sql);
