@@ -60,10 +60,10 @@ if(!isset($_SESSION["username"]))
 </body>
 </html>
 <?php
-    $data = {
+    $data = [
         'phone' => $_POST['phone'], // Receivers phone
         'body' => $_POST['body'], // Message   
-    };
+    ];
     $json = json_encode($data); // Encode data to JSON
     // URL for request POST /message
     $url = 'https://api.chat-api.com/instance94465/sendMessage?token=lp7q7u5rxp14rf7k';
