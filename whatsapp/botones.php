@@ -23,4 +23,5 @@ if(!isset($_SESSION["username"]))
 <a align="center" href="actualizar.php" class="btn btn-success">Actualizar nº telefono</a> <br>
 <br>
 <a align="center" href="logout.php" class="btn btn-success">Cerrar Sesion</a>
+</html>
 

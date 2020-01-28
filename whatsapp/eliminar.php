@@ -62,3 +62,4 @@ if ($conn->connect_error) {
 $telefono = $_POST['telefono'];
 $sql = "DELETE FROM telefono WHERE numero=$telefono";
 $result = $conn->query($sql);
+?>

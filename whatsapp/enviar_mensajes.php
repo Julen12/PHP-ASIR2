@@ -56,6 +56,7 @@ if(!isset($_SESSION["username"]))
         left:660px;
         bottom:550px;
     }
+    </style>
 </body>
 </html>
 <?php

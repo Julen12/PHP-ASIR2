@@ -66,3 +66,4 @@ $nombre = $_POST['nombre'];
 $telefono = $_POST['telefono'];
 $sql = "UPDATE telefono SET numero='$telefono' WHERE nombre = '$nombre'";
 $result = $conn->query($sql);
+?>

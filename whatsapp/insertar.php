@@ -65,3 +65,4 @@ $telefono = $_POST['telefono'];
 $nombre = $_POST['nombre'];
 $sql = "INSERT INTO telefono (nombre,numero) VALUES ('$nombre','$telefono')";
 $result = $conn->query($sql);
+?>
