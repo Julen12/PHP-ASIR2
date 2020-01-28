@@ -60,9 +60,8 @@ if(!isset($_SESSION["username"]))
 </body>
 </html>
 <?php
-$telefono = [$_POST['phone']]
     $data = {
-        'phone' => $telefono, // Receivers phone
+        'phone' => $_POST['phone'], // Receivers phone
         'body' => $_POST['body'], // Message   
     };
     $json = json_encode($data); // Encode data to JSON
@@ -77,7 +76,6 @@ $telefono = [$_POST['phone']]
     ]);
     // Send a request
     $result = file_get_contents($url, false, $options);
-    echo $json;
     ?>
                             
     
