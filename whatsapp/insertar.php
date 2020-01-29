@@ -51,12 +51,10 @@ if(!isset($_SESSION["username"]))
 
 
 <?php
-// si el nombre es  distinto al vacio no me hagas la insert
-if ($row['nombre'] != '') {
-     $servername = "localhost";
+    $servername = "localhost";
      $username = "root";
      $password = "Admin108";
-     $dbname = "login";
+     $dbname = "cuenta";
      // Create connection
      $conn = new mysqli($servername, $username, $password,$dbname);
      // Check connection
@@ -67,5 +65,4 @@ if ($row['nombre'] != '') {
      $nombre = $_POST['nombre'];
      $sql = "INSERT INTO telefono (nombre,numero) VALUES ('$nombre','$telefono')";
      $result = $conn->query($sql);
-}
 ?>

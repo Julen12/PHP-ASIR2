@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS users (
     pass VARCHAR(250)
 );
  CREATE TABLE telefono (
-     nombre varchar(50),
-     numero VARCHAR(50)
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     nombre varchar(50) DEFAULT '',
+     numero VARCHAR(50) DEFAULT ''
      );
  
