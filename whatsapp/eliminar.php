@@ -31,7 +31,7 @@ if(!isset($_SESSION["username"]))
                                              $servername = "localhost";
                                              $username = "root";
                                              $password = "Admin108";
-                                             $dbname = "login";
+                                             $dbname = "cuenta";
                                              // Create connection
                                              $conn = new mysqli($servername, $username, $password,$dbname);
                                              // Check connection
@@ -51,7 +51,7 @@ if(!isset($_SESSION["username"]))
 $servername = "localhost";
 $username = "root";
 $password = "Admin108";
-$dbname = "login";
+$dbname = "cuenta";
 // Create connection
 $conn = new mysqli($servername, $username, $password,$dbname);
 // Check connection

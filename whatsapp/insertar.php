@@ -49,19 +49,23 @@ if(!isset($_SESSION["username"]))
                                              ?>
                               </html>
 
+
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "Admin108";
-$dbname = "login";
-// Create connection
-$conn = new mysqli($servername, $username, $password,$dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// si el nombre es  distinto al vacio no me hagas la insert
+if ($row['nombre'] != '') {
+     $servername = "localhost";
+     $username = "root";
+     $password = "Admin108";
+     $dbname = "login";
+     // Create connection
+     $conn = new mysqli($servername, $username, $password,$dbname);
+     // Check connection
+     if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+     }
+     $telefono = $_POST['telefono'];
+     $nombre = $_POST['nombre'];
+     $sql = "INSERT INTO telefono (nombre,numero) VALUES ('$nombre','$telefono')";
+     $result = $conn->query($sql);
 }
-$telefono = $_POST['telefono'];
-$nombre = $_POST['nombre'];
-$sql = "INSERT INTO telefono (nombre,numero) VALUES ('$nombre','$telefono')";
-$result = $conn->query($sql);
 ?>
