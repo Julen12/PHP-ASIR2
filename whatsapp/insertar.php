@@ -23,7 +23,7 @@ if(!isset($_SESSION["username"]))
                      <input type="text" name="nombre"  placeholder="nombre" class="form-control" /><br>
                      <input type="text" name="telefono"  placeholder="telefono" class="form-control" />
                      <br/>   
-                     <input type="submit" name="eliminar" value="Añadir" class="btn btn-info" />
+                     <input type="submit" name="insertar" value="Añadir" class="btn btn-info" />
                      <a align="center" href="botones.php" class="btn btn-success">Regresar</a>   
                      <br/>  
                                    </form> 
