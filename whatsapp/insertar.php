@@ -19,7 +19,7 @@ if(!isset($_SESSION["username"]))
            <div class="container" style="width:500px;">  
                 <h3 align="center">Insertar nº telefono</h3>  
                 <br />    
-                <form  action ="insertar.php" method="post" value="<?php echo $row["id"]?>">  
+                <form  action ="insertar.php" method="post">  
                      <input type="text" name="nombre"  placeholder="nombre" class="form-control" /><br>
                      <input type="text" name="telefono"  placeholder="telefono" class="form-control" />
                      <br/>   
