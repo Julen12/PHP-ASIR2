@@ -50,7 +50,6 @@ if(!isset($_SESSION["username"]))
                               </html>
 
 <?php
-$row = $result;
 $servername = "localhost";
 $username = "root";
 $password = "Admin108";

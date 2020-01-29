@@ -18,7 +18,7 @@ if(!isset($_SESSION["username"]))
            <div class="container" style="width:500px;">  
                 <h3 align="center">Eliminar nº telefono</h3>  
                 <br />    
-                <form  action ="eliminar.php" method="post" value="<?php echo $row["id"]?>">  
+                <form  action ="eliminar.php" method="post">  
                      <input type="text" name="telefono"  placeholder="telefono" class="form-control" />
                      <br/>   
                      <input type="submit" name="eliminar" value="Eliminar" class="btn btn-info" />
