@@ -66,7 +66,7 @@ if(!isset($_SESSION["username"]))
     ];
     $json = json_encode($data); // Encode data to JSON
     // URL for request POST /message
-    $url = 'https://api.chat-api.com/instance94465/sendMessage?token=lp7q7u5rxp14rf7k';
+    $url = 'https://api.chat-api.com/instance96995/sendMessage?token=gsn4pxisyahnsall';
     // Make a POST request
     $options = stream_context_create(['http' => [
             'method'  => 'POST',
