@@ -20,13 +20,12 @@
            if(mysqli_query($connect, $query))  
            {  
                 echo '<script>alert("Registro hecho")</script>';  
-                header("location:index.php?action=login");  
            }  
       }  
  }  
  if(isset($_POST["login"]))  
  {  
-      if(empty($_POST["username"]) || empty($_POST["password"]))  
+      if(empty($_POST["username"]) || empty($_POST["password"]))  // si metes el usuario y la contraseña mal
       {  
            echo '<script>alert("Ambos campos son obligatorios")</script>';  
       }  
@@ -38,17 +37,17 @@
            $result = mysqli_query($connect, $query);  
            if(mysqli_num_rows($result) > 0)  
            {  
-                while($row = mysqli_fetch_array($result))  
+                while($row = mysqli_fetch_array($result))  // si metes la contraseña mal
                 {  
                      if(password_verify($password, $row["pass"]))  
                      {  
-                          //return true;  
+                          //PA DENTRO
                           $_SESSION["username"] = $username;  
                           header("location:botones.php");  
                      }  
                      else  
                      {  
-                          //return false;  
+                          //PA FUERA 
                           echo '<script>alert("Detalles de usuario incorrectos")</script>';  
                      }  
                 }  
